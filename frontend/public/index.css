@@ -67,6 +67,7 @@ form > button {
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
+  margin: 10px 20px;
 }
 
 .val {
