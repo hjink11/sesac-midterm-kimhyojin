@@ -50,7 +50,25 @@ exports.create = async (req, res) => {
 };
 
 /* 기존 Todo 수정 */
-exports.update = async (req, res) => {};
+exports.update = async (req, res) => {
+  console.log(req.params);
+  try {
+    const [result] = await Todo.update(
+      {
+        title: req.body.title,
+        done: req.body.done,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("sever error");
+  }
+};
 
 /* 기존 Todo 삭제 */
 exports.delete = async (req, res) => {
