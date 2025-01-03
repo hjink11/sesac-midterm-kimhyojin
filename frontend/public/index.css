@@ -1,0 +1,117 @@
+/* 가상 클래스 선택자 root의 색상들은 필수 사용요소가 아닙니다.
+색상은 자유롭게 구성해주세요. */
+:root {
+  --main-color: #04c82f;
+  --main-bg-color: #e5ffeb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5ffeb;
+}
+
+header {
+  background-color: #04c82f;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header > img {
+  width: 200px;
+  height: 50px;
+  margin: 20px 0;
+}
+
+header > p {
+  color: #e5ffeb;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.container {
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+}
+form > input {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #04c82f;
+  background-color: #e5ffeb;
+  border-radius: 10px;
+}
+form > button {
+  width: 100px;
+  height: 40px;
+  background-color: #e5ffeb;
+  border: 1px solid #04c82f;
+  border-radius: 10px;
+}
+
+.todolist {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.val {
+  width: 50%;
+  margin: 10px 0;
+  display: flex;
+}
+
+.val > button {
+  width: 20px;
+  height: 20px;
+  background-color: #04c82f;
+  color: #e5ffeb;
+  border-radius: 1px;
+  border: 1px solid #04c82f;
+  margin: 0 10px;
+}
+
+@media (min-width: 540px) {
+  header {
+    background-color: #04c82f;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  header > img {
+    width: 200px;
+    height: 50px;
+    margin: 20px 20px;
+  }
+
+  .todolist {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 960px) {
+  .val {
+    width: 20%;
+    margin: 10px 0;
+    display: flex;
+  }
+}
